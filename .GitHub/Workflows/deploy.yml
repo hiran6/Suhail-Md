@@ -1,0 +1,22 @@
+name:Node.js CI
+npn:
+push:
+branches:
+- main
+jobs:
+build:
+run-on:ubuntu-latest
+strategy:
+natrix:
+node-version: [20.×]
+steps:
+- name:checkout repository
+uses: action/checkout@v3
+-name: set up Node.js
+uses: action/setup-node@v3
+with:
+node-version ${{ natrix-node-version }}
+-name:install dependencles
+run: npn install 
+-name: start application
+run: npn star
